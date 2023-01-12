@@ -8,7 +8,13 @@ tabela.addEventListener("dblclick", function(event) {
     //var paiDoAlvo = alvoEvento.parentNode; //TR
     //paiDoEvento.remove();
 
-    event.target.parentNode.remove();
+    event.target.parentNode.classList.add("fadeOut");
+    
+    setTimeout(function(){
+        event.target.parentNode.remove();
+    }, 500); //setTimeOut serve para que o javascript demore um tempo pra executar o código dentro dele, o tempo passado em MS
+            //setTimeOut(function(){}, tempo)/
+    
 
 })
 
